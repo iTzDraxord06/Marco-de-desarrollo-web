@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: #f4f6f7;
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+    background-color: #2f7f7f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-lateral {
+    width: 210px;
+    min-width: 210px;
+    min-height: calc(100vh - 64px);
+    background-color: #303030;
+    color: white;
+    padding: 25px 15px;
+}
+
+.btn-menu {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-menu:hover,
+.btn-menu.activo {
+    background-color: #2f7f7f;
+}
+
+.contenido {
+    padding: 30px;
+    min-width: 0;
+}
+
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+.tarjeta-resumen {
+    min-height: 125px;
+}
+
+.tarjeta-resumen h3 {
+    color: #2f7f7f;
+    font-weight: bold;
+}
+
+.table-clinica th {
+    background-color: #2f7f7f;
+    color: white;
+}
+
+.btn-clinica {
+    background-color: #2f7f7f;
+    color: white;
+}
+
+.btn-clinica:hover {
+    background-color: #256767;
+    color: white;
+}
+
+.card {
+    border-radius: 6px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .menu-lateral {
+        width: 160px;
+        min-width: 160px;
+        padding: 15px 10px;
+    }
+
+    .contenido {
+        padding: 18px;
+    }
+
+    .encabezado h1 {
+        font-size: 18px;
+    }
+
+}
