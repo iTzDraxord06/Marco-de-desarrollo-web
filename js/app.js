@@ -59,7 +59,31 @@ function mostrarSeccion(id) {
         document.querySelector('[data-seccion="' + id + '"]');
 
     botonActivo.classList.add("activo");
+
+    cerrarMenuMovil();
 }
+
+const botonMenuHamburguesa =
+    document.querySelector(".boton-menu-hamburguesa");
+const menuLateral = document.getElementById("menuLateral");
+
+function cerrarMenuMovil() {
+
+    menuLateral.classList.remove("abierto");
+    botonMenuHamburguesa.setAttribute("aria-expanded", "false");
+    botonMenuHamburguesa.setAttribute("aria-label", "Abrir menú");
+}
+
+botonMenuHamburguesa.addEventListener("click", function() {
+
+    const menuAbierto = menuLateral.classList.toggle("abierto");
+
+    this.setAttribute("aria-expanded", menuAbierto);
+    this.setAttribute(
+        "aria-label",
+        menuAbierto ? "Cerrar menú" : "Abrir menú"
+    );
+});
 
 function cargarPacientes() {
 
@@ -197,3 +221,4 @@ document.getElementById("formCita").addEventListener(
 
 cargarPacientes();
 cargarCitas();
+
